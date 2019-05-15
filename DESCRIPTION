@@ -1,0 +1,19 @@
+Package: njtmisc
+Title: Misc Functions that I find useful
+Version: 0.0.0.9000
+Authors@R: 
+    person(given = "Nicholas",
+           family = "Tierney",
+           role = c("aut", "cre"),
+           email = "nicholas.tierney@gmail.com",
+           comment = c(ORCID = "0000-0003-1460-8722"))
+Description: This package provides a bunch of useful functions.
+License: What license it uses
+Encoding: UTF-8
+LazyData: true
+Imports: 
+    fs,
+    purrr
+Remotes: 
+    hadley/requirements
+RoxygenNote: 6.1.1
