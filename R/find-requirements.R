@@ -8,13 +8,12 @@
 #'   purrr::map(usethis::use_package)
 #'   }
 find_unique_requirements <- function(path,
-                                     recursive,
+                                     recurse,
                                      regexp){
-  fs::dir_ls(path = ".",
-             recursive = TRUE,
-             regexp = "*.Rmd$") %>%
+  fs::dir_ls(path = path,
+             recurse = recurse,
+             regexp = regexp) %>%
     purrr::map(requirements::req_file) %>%
     purrr::flatten_chr() %>%
     unique()
 }
-
