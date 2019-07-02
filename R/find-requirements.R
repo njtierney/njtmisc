@@ -1,11 +1,18 @@
 #' @exportes
 #' @examples
-#' # add all used packages into a package imports
 #' \dontrun{
-#' find_unique_requirements(path = ".",
-#'   recursive = TRUE,
-#'   regexp = "*.Rmd$") %>%
-#'   purrr::map(usethis::use_package)
+#'
+#' # find all unique requirements inside .Rmd files
+#' my_req <- find_unique_requirements(path = ".",
+#'                                    recursive = TRUE,
+#'                                    regexp = "*.Rmd$")
+#'
+#' my_req
+#'
+#' # now add these to your DESCRIPTION
+#' library(purrr)
+#' library(usethis)
+#' map(my_req, use_package)
 #'   }
 find_unique_requirements <- function(path,
                                      recurse,
@@ -17,3 +24,4 @@ find_unique_requirements <- function(path,
     purrr::flatten_chr() %>%
     unique()
 }
+

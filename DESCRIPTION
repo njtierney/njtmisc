@@ -8,12 +8,14 @@ Authors@R:
            email = "nicholas.tierney@gmail.com",
            comment = c(ORCID = "0000-0003-1460-8722"))
 Description: This package provides a bunch of useful functions.
-License: What license it uses
+License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
 Imports: 
     fs,
-    purrr
+    purrr,
+    requirements,
+    magrittr
 Remotes: 
     hadley/requirements
 RoxygenNote: 6.1.1
