@@ -1,4 +1,11 @@
-#' @exportes
+#' Find the unique requirements in a directory
+#'
+#' @param path directory path
+#'
+#' @param recurse recursively search a directory?
+#' @param regexp regular expression to use
+#'
+#' @exports
 #' @examples
 #' \dontrun{
 #'
