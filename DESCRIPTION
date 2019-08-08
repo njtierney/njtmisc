@@ -15,7 +15,9 @@ Imports:
     fs,
     purrr,
     requirements,
-    magrittr
+    magrittr,
+    glue,
+    rlang
 Remotes: 
     hadley/requirements
 RoxygenNote: 6.1.1

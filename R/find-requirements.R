@@ -5,7 +5,7 @@
 #' @param recurse recursively search a directory?
 #' @param regexp regular expression to use
 #'
-#' @exports
+#' @export
 #' @examples
 #' \dontrun{
 #'
