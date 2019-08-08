@@ -22,14 +22,27 @@ slide_link_pdf <- function(l_id){
 #' generate slide links for ETC10101
 #'
 #' @param l_id lecture id. Usually something like "1a" or "2a", etc.
+#' @param clipboard use clipboard? Default is TRUE.
 #'
 #' @return character vector
 #' @export
 #'
 #' @examples
 #' slide_links_all("2a")
-slide_links_all <- function(l_id){
+slide_links_all <- function(l_id, clipboard = TRUE){
+
+  link_string <-
   glue::glue("{slide_link_html(l_id)}; \\
              {slide_link_pdf(l_id)}; \\
              {slide_link_rmd(l_id)}")
+
+
+  if (clipboard) {
+    message("writing links to clipboard")
+    return(clipr::write_clip(link_string,
+                             allow_non_interactive = TRUE))
+  } else if (!clipboard){
+    return(link_string)
+  }
+
 }

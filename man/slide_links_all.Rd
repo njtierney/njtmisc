@@ -4,10 +4,12 @@
 \alias{slide_links_all}
 \title{generate slide links for ETC10101}
 \usage{
-slide_links_all(l_id)
+slide_links_all(l_id, clipboard = TRUE)
 }
 \arguments{
 \item{l_id}{lecture id. Usually something like "1a" or "2a", etc.}
+
+\item{clipboard}{use clipboard? Default is TRUE.}
 }
 \value{
 character vector

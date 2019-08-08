@@ -1,6 +1,6 @@
 Package: njtmisc
 Title: Misc Functions that I find useful
-Version: 0.0.0.9000
+Version: 0.0.1.9000
 Authors@R: 
     person(given = "Nicholas",
            family = "Tierney",
@@ -17,7 +17,8 @@ Imports:
     requirements,
     magrittr,
     glue,
-    rlang
+    rlang,
+    clipr
 Remotes: 
     hadley/requirements
 RoxygenNote: 6.1.1
