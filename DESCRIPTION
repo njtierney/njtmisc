@@ -18,7 +18,8 @@ Imports:
     magrittr,
     glue,
     rlang,
-    clipr
+    clipr,
+    stats
 Remotes: 
     hadley/requirements
 Depends:

@@ -35,3 +35,22 @@ library(njtmisc)
 n_formals(lm)
 pkgv(base)
 ```
+
+convert alphabet to numbers
+
+```{r example-alpha}
+alpha_to_num(c("A","A","D","E","z", "Z","a"))
+alpha_to_num(sample(letters))
+alpha_to_num(letters)
+alpha_to_num(LETTERS)
+```
+
+convert numbers to alphabet
+
+```{r example-num}
+num_to_alpha(1:26)
+num_to_alpha(sample(1:26))
+
+num_to_alpha(1:26, upper = FALSE)
+num_to_alpha(sample(1:26), upper = FALSE)
+```

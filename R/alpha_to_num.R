@@ -18,3 +18,38 @@
 alpha_to_num <- function(x){
   as.numeric(alpha_num[x])
 }
+
+#' Convert numbers to alphabet
+#'
+#' @param x characters from roman alphabet (A-Z or a-z)
+#' @param upper logical - do you want uppercase? Default is TRUE
+#'
+#' @return
+#'
+#' @examples
+#' abc <- c("a", "b", "c")
+#' fed <- c("f", "e", "d")
+#' aaa <- c("a", "a", "a")
+#'
+#' alpha_to_num(LETTERS)
+#' alpha_to_num(letters)
+#' alpha_to_num(abc)
+#' alpha_to_num(fed)
+#' alpha_to_num(aaa)
+#' num_to_alpha(1:26)
+#' @export
+num_to_alpha <- function(x, upper = TRUE){
+    num_alpha <- stats::setNames(letters, seq_along(letters))
+    NUM_ALPHA <- stats::setNames(LETTERS, seq_along(LETTERS))
+
+  if (upper) {
+    out <- as.character(NUM_ALPHA[x])
+  }
+
+  if (!upper) {
+    out <- as.character(num_alpha[x])
+  }
+
+    out
+
+}
