@@ -27,27 +27,20 @@ alpha_to_num <- function(x){
 #' @return
 #'
 #' @examples
-#' abc <- c("a", "b", "c")
-#' fed <- c("f", "e", "d")
-#' aaa <- c("a", "a", "a")
-#'
-#' alpha_to_num(LETTERS)
-#' alpha_to_num(letters)
-#' alpha_to_num(abc)
-#' alpha_to_num(fed)
-#' alpha_to_num(aaa)
+#' num_to_alpha(c(1,1,1))
+#' num_to_alpha(c(1,1,1), upper = FALSE)
 #' num_to_alpha(1:26)
+#' num_to_alpha(sample(1:26))
+#' num_to_alpha(sample(1:26), upper = FALSE)
 #' @export
 num_to_alpha <- function(x, upper = TRUE){
-    num_alpha <- stats::setNames(letters, seq_along(letters))
-    NUM_ALPHA <- stats::setNames(LETTERS, seq_along(LETTERS))
 
   if (upper) {
-    out <- as.character(NUM_ALPHA[x])
+    out <- as.character(LETTERS[x])
   }
 
   if (!upper) {
-    out <- as.character(num_alpha[x])
+    out <- as.character(letters[x])
   }
 
     out

@@ -18,14 +18,9 @@ num_to_alpha(x, upper = TRUE)
 Convert numbers to alphabet
 }
 \examples{
-abc <- c("a", "b", "c")
-fed <- c("f", "e", "d")
-aaa <- c("a", "a", "a")
-
-alpha_to_num(LETTERS)
-alpha_to_num(letters)
-alpha_to_num(abc)
-alpha_to_num(fed)
-alpha_to_num(aaa)
+num_to_alpha(c(1,1,1))
+num_to_alpha(c(1,1,1), upper = FALSE)
 num_to_alpha(1:26)
+num_to_alpha(sample(1:26))
+num_to_alpha(sample(1:26), upper = FALSE)
 }
