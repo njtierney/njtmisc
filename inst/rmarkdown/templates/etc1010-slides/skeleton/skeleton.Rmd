@@ -47,12 +47,22 @@ output:
 library(tidyverse)
 library(knitr)
 library(kableExtra)
-opts_chunk$set(echo = FALSE,   
+library(emo)
+library(ggraph)
+library(igraph)
+library(tidygraph)
+library(knitr)
+library(lubridate)
+library(gridExtra)
+library(plotly)
+library(countdown)
+opts_chunk$set(echo = TRUE,   
                message = FALSE,
                warning = FALSE,
                collapse = TRUE,
                fig.height = 4,
                fig.width = 8,
+               out.width = "100%",
                fig.align = "center",
                cache = FALSE)
 
