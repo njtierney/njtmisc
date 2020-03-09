@@ -2,10 +2,12 @@
 
 export("%>%")
 export(alpha_to_num)
+export(create_lecture_pdf)
 export(find_unique_requirements)
 export(n_formals)
 export(num_to_alpha)
 export(pkgv)
 export(slide_links_all)
+export(zip_ida_exercise)
 importFrom(magrittr,"%>%")
 importFrom(utils,packageVersion)
